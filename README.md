@@ -1,70 +1,90 @@
-## custom-shell / custom-shell
-[![Build Status](https://github.com/tonydelrio/custom-shell/workflows/Build/badge.svg)](https://github.com/tonydelrio/custom-shell/actions)
-[![Code Coverage](https://codecov.io/gh/tonydelrio/custom-shell/branch/main/graph/badge.svg)](https://codecov.io/gh/tonydelrio/custom-shell)
+# custom-shell
 
-## Description / Description
-Le projet custom-shell est une implémentation d'une shell personnalisée en C. Cette shell est conçue pour être flexible et personnalisable, permettant aux utilisateurs de personnaliser les commandes et les fonctionnalités selon leurs besoins.
+A customizable command-line shell implemented in C, empowering users to tailor their interaction with the operating system.
 
-## Fonctionnalités / Features
-### Historique de commandes
-L'historique de commandes permet aux utilisateurs de revoir les commandes précédentes et de les réexécuter facilement.
+## Overview
 
-### Autocomplétion
-La fonctionnalité d'autocomplétion aide les utilisateurs à taper les commandes de manière plus rapide et plus précise.
+custom-shell is a highly flexible and personalized shell designed to overcome the limitations of traditional shells. By leveraging a modular architecture and a robust parser, this project provides an exceptional user experience, enabling users to craft their ideal command-line interface. With custom-shell, users can tailor their shell to suit their workflow, streamlining productivity and efficiency. This project is ideal for developers, system administrators, and power users seeking a high degree of customization.
 
-### Commandes personnalisées
-Les utilisateurs peuvent ajouter des commandes personnalisées pour répondre à leurs besoins spécifiques.
+## Features
 
-### Analyseur de commande
-L'analyseur de commande permet d'analyser les commandes entrées par les utilisateurs et de les exécuter correctement.
+* **Modular Architecture**: custom-shell is built using a modular design, allowing users to easily extend or modify existing features.
+* **Robust Parser**: A high-performance parser ensures accurate command execution, minimizing errors and improving overall reliability.
+* **Command History**: Users can navigate through their command history with ease, reducing the need for manual note-taking.
+* **Autocomplete**: Intelligently suggests commands and arguments, saving time and effort.
+* **Customizable Keyboard Shortcuts**: Users can define their own keyboard shortcuts to streamline their workflow.
+* **Syntax Highlighting**: Enhances readability by visually distinguishing different parts of the command syntax.
+* **Extensive Configuration Options**: Users can customize the shell to fit their preferences, from font sizes to command completion settings.
 
-## Installation
-Pour installer le projet, exécutez les commandes suivantes:
+## Getting Started
+
+### Prerequisites
+
+* C compiler (gcc or clang)
+* Make utility (make)
+* Git version control system
+
+### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/tonydelrio/custom-shell.git
+
+# Navigate to the project directory
 cd custom-shell
+
+# Build the shell
 make
+
+# Install the shell
+sudo make install
 ```
 
-## Utilisation / Usage
-Pour utiliser la shell, vous pouvez simplement exécuter le fichier `shell` :
+### Usage
 
 ```bash
-./shell
+# Launch the custom-shell
+custom-shell
+
+# Execute a command
+custom-shell> ls -l
+
+# Navigate through command history
+custom-shell> history
+
+# Use autocomplete
+custom-shell> cd /ho
+custom-shell> cd /home/user
 ```
 
-Voici quelques exemples d'utilisation :
+## Architecture
+
+The project is structured into five main files:
+
+* `src/parser.c`: Handles command parsing and execution.
+* `src/commands.c`: Manages command execution and history.
+* `src/history.c`: Provides functionality for navigating through command history.
+* `src/shell.c`: Acts as the main entry point for the shell, handling user input and interaction.
+* `src/autocomplete.c`: Offers intelligent command suggestion and completion.
+
+## API Reference
+
+No public APIs are exposed by this project. Instead, users interact with the shell through a custom command-line interface.
+
+## Testing
 
 ```bash
-# Exécuter une commande personnalisée
-> mon_commande "argument1" "argument2"
-
-# Utiliser l'historique de commandes
-> history
-> !5 (exécuter la 5ème commande de l'historique)
-
-# Utiliser l'autocomplétion
-> tab (affiche les options possibles)
-> cd /d (complète le chemin d'accès)
+# Run tests
+make test
 ```
 
-## Architecture du projet / Project architecture
-Le projet est organisé en plusieurs fichiers :
+## Contributing
 
-* `shell.c` : fichier principal de la shell
-* `history.c` : gestion de l'historique de commandes
-* `autocomplete.c` : fonctionnalité d'autocomplétion
-* `commands.c` : implémentation de commandes personnalisées
-* `parser.c` : analyseur de commande
-* `Makefile` : fichier de compilation
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push and open a pull request
 
-## Contribuer / Contributing
-Pour contribuer au projet, vous pouvez :
+## License
 
-* Soumettre des pull requests avec vos modifications
-* Faire des issues pour signaler des bugs ou des problèmes
-* Discuter des fonctionnalités et des améliorations avec la communauté
-
-## Licence
-Le projet est sous licence MIT. Vous pouvez librement utiliser, modifier et distribuer le code, à condition de respecter les conditions de la licence.
+custom-shell is licensed under the MIT License.

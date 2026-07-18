@@ -1,18 +1,18 @@
-# Design Document: custom-shell / Document de conception
+# Design Document: custom-shell
 
-## Overview / Vue d'ensemble
-Implémentation d'une shell personnalisée en C
+## Overview
+## custom-shell / custom-shell
+[![Build Status](https://github.com/tonydelrio/custom-shell/workflows/Build/badge.svg)](https://github.com/tonydelrio/custom-shell/actions)
+[![Code Coverage](https://cod
 
 ## Architecture
-Le projet est structuré de manière modulaire pour faciliter la maintenance.
-The project is structured in a modular way for easy maintenance.
+The project follows a modular architecture for maintainability and extensibility.
 
-## Choix techniques / Technical choices
-- Langage / Language: c
-- Approche: Implementation directe avec focus sur la performance
-- Approach: Direct implementation with focus on performance
+## Technical Choices
+- Language: c
+- Approach: Direct implementation with focus on correctness and performance
 
-## Améliorations futures / Future improvements
-- Optimisation des performances / Performance optimization
-- Ajout de tests supplémentaires / Additional tests
-- Documentation enrichie / Enhanced documentation
+## Future Improvements
+- Performance optimization
+- Additional test coverage
+- Enhanced documentation
